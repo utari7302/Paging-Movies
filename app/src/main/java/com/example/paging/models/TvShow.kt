@@ -1,9 +1,16 @@
 package com.example.paging.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "Movies")
 data class TvShow(
-    val country: String,
-    val end_date: Any,
+
+    @PrimaryKey(autoGenerate = false)
     val id: Int,
+
+    val country: String,
+    //val end_date: Any,
     val image_thumbnail_path: String,
     val name: String,
     val network: String,
